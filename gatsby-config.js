@@ -12,7 +12,7 @@ module.exports = {
         stages: ['develop'],
         options: {
           emitWarning: true,
-          failOnError: true,
+          failOnError: false,
         },
       },
     },
@@ -26,6 +26,7 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sitemap',
+    `gatsby-transformer-remark`,
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
@@ -49,6 +50,13 @@ module.exports = {
         path: './src/pages/',
       },
       __key: 'pages',
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/src/posts`,
+      },
     },
   ],
 };
