@@ -1,12 +1,15 @@
 import styled from 'styled-components';
 import React from 'react';
+import Layout from '../components/Layouts';
 
 const Wrapper = styled.div`
 
 `;
 
 const AboutPage = () => (
-  <Wrapper>about</Wrapper>
+  <Layout>
+    <Wrapper>about</Wrapper>
+  </Layout>
 );
 
 export default AboutPage;
