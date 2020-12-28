@@ -3,6 +3,17 @@ module.exports = {
     title: 'react-blog',
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Audiowide`,
+          `PT Sans:300,400,400i,700`,
+          `Noto Sans KR:300,400,400i,700`
+        ],
+        display: 'swap'
+      }
+    },
     'gatsby-plugin-netlify-cms',
     {
       resolve: 'gatsby-plugin-eslint',

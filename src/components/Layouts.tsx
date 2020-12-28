@@ -1,6 +1,7 @@
 import React from 'react';
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
+import Header from './Header'
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -12,7 +13,9 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
-    background: #eaeaea;
+  }
+  body {
+    font-family: 'PT Sans', 'Noto Sans KR', sans-serif;
   }
   *:focus {
     outline: none;
@@ -24,14 +27,23 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     cursor: pointer;
     color: inherit;
-  }
+  };
 `;
 
+const Wrapper = styled.div`
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 24px;
+`
+
 const Layout = ({ children }: LayoutProps) => (
-  <>
-    <GlobalStyle />
+<>
+  <GlobalStyle />
+  <Header />
+  <Wrapper>
     { children }
-  </>
+  </Wrapper>
+</>
 );
 
 export default Layout;
