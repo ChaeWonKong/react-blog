@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'react-blog',
+    siteUrl: 'https://andromedaleon.netlify.app',
   },
   plugins: [
     {
