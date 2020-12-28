@@ -1,5 +1,5 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -9,18 +9,18 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   padding: 24px;
-`
+`;
 
 const Title = styled.h1`
   font-size: 1rem;
   background-color: transparent;
   font-family: 'Audiowide', cursive;
-`
+`;
 
 const Header = () => (
-<Wrapper>
-  <Title>ANDROMEDA LEON</Title>
-</Wrapper>
-)
+  <Wrapper>
+    <Title>ANDROMEDA LEON</Title>
+  </Wrapper>
+);
 
-export default Header
+export default Header;

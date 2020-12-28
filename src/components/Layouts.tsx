@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
-import Header from './Header'
+import Header from './Header';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -34,16 +34,16 @@ const Wrapper = styled.div`
   margin: 0 auto;
   max-width: 800px;
   padding: 24px;
-`
+`;
 
 const Layout = ({ children }: LayoutProps) => (
-<>
-  <GlobalStyle />
-  <Header />
-  <Wrapper>
-    { children }
-  </Wrapper>
-</>
+  <>
+    <GlobalStyle />
+    <Header />
+    <Wrapper>
+      { children }
+    </Wrapper>
+  </>
 );
 
 export default Layout;
