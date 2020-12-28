@@ -19,7 +19,7 @@ const Title = styled.h1`
 
 const Header = () => (
   <Wrapper>
-    <Title>ANDROMEDA LEON</Title>
+    <Title>TIN WOODMAN</Title>
   </Wrapper>
 );
 

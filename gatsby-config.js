@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `ANDROMEDA LEON :: Tin Woodman's bildungsroman`,
+    title: `TIN WOODMAN :: Tin Woodman's bildungsroman blog`,
     description: 'A Blog For tech, IT, Computer Engineering, Web and React.',
-    siteUrl: 'https://andromedaleon.netlify.app',
+    siteUrl: 'https://tinwoodman.netlify.app',
     tags: 'IT, computer science, web, react, nodejs, engineering, programming, development'
   },
   plugins: [
