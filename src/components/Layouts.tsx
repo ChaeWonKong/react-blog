@@ -40,6 +40,7 @@ const Wrapper = styled.div`
 const Layout = ({ children }: LayoutProps) => (
   <>
     <Helment>
+      <meta property='og:site_name' content='TIN WOODMAN' />
       <meta property='og:title' content={ `TIN WOODMAN :: Tin Woodman's bildungsroman blog` } />
       <meta
         property='og:description'

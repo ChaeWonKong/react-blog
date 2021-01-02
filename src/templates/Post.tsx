@@ -1,6 +1,8 @@
 import React from 'react';
 
 import { graphql } from 'gatsby';
+import Layouts from '../components/Layouts';
+import Helmet from 'react-helmet';
 
 interface TemplateProps {
   data: any;
@@ -13,16 +15,27 @@ export default function Template({
   const { frontmatter, html } = markdownRemark;
 
   return (
-    <div className='blog-post-container'>
-      <div className='blog-post'>
-        <h1>{ frontmatter.title }</h1>
-        <h2>{ frontmatter.date }</h2>
-        <div
-          className='blog-post-content'
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
-      </div>
-    </div>
+    <>
+      <Helmet>
+        <title>{ `TIN WOODMAN::${frontmatter.title}` }</title>
+        <meta property='og:image' content={ frontmatter.image } />
+        <meta property='og:title' content={ frontmatter.title } />
+        <meta property='og:description' content={ frontmatter.description } />
+        <meta property='og:image' content={ frontmatter.image } />
+      </Helmet>
+      <Layouts>
+        <div className='blog-post-container'>
+          <div className='blog-post'>
+            <h1>{ frontmatter.title }</h1>
+            <h2>{ frontmatter.date }</h2>
+            <div
+              className='blog-post-content'
+              dangerouslySetInnerHTML={{ __html: html }}
+            />
+          </div>
+        </div>
+      </Layouts>
+    </>
   );
 }
 export const pageQuery = graphql`
@@ -33,6 +46,8 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         slug
         title
+        image
+        description
       }
     }
   }
