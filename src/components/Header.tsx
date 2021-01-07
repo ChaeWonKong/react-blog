@@ -8,18 +8,19 @@ const Wrapper = styled.div`
   border-bottom: 1px solid #707070;
   display: flex;
   align-items: center;
-  padding: 24px;
+  padding: 12px 24px;
 `;
 
 const Title = styled.h1`
   font-size: 1rem;
   background-color: transparent;
   font-family: 'Audiowide', cursive;
+  cursor: pointer;
 `;
 
 const Header = () => (
   <Wrapper>
-    <Title>TIN WOODMAN</Title>
+    <Title onClick={() => location.href = '/'}>TIN WOODMAN</Title>
   </Wrapper>
 );
 
