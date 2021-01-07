@@ -3,10 +3,14 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Layouts from '../components/Layouts';
 import Helmet from 'react-helmet';
+require("prismjs/themes/prism.css")
+
+import * as S from './styled'
 
 interface TemplateProps {
   data: any;
 }
+
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -26,8 +30,8 @@ export default function Template({
       <Layouts>
         <div className='blog-post-container'>
           <div className='blog-post'>
-            <h1>{ frontmatter.title }</h1>
-            <h2>{ frontmatter.date }</h2>
+            <S.Heading1>{ frontmatter.title }</S.Heading1>
+            <S.Heading2>{ frontmatter.date }</S.Heading2>
             <div
               className='blog-post-content'
               dangerouslySetInnerHTML={{ __html: html }}

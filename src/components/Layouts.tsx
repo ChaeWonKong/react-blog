@@ -9,7 +9,6 @@ interface LayoutProps {
 }
 
 const GlobalStyle = createGlobalStyle`
-  ${reset}
   * {
     box-sizing: border-box;
     -ms-overflow-style: none;  /* IE and Edge */
@@ -25,9 +24,13 @@ const GlobalStyle = createGlobalStyle`
     display: none;
   }
   a {
-    text-decoration: none;
+    /* text-decoration: none; */
     cursor: pointer;
     color: inherit;
+    transition: .1s ease-in-out;
+    :hover {
+      color: #ababab;
+    }
   };
 `;
 

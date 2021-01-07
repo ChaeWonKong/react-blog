@@ -7,15 +7,20 @@ const Wrapper = styled.div`
 
 `;
 
+const ListItem = styled.a`
+  font-size: 18px;
+  margin: 24px 0;
+`
+
 const IndexPage = ({ data }: any) => {
   const posts = data.allMarkdownRemark.edges
     .map(({ node }) => ({ ...node.frontmatter }));
 
   const renderPosts = () =>posts.map(({ title, date, slug }) => (
-    <a href={ slug } key={ slug }>
+    <ListItem href={ slug } key={ slug }>
       <p>{ title }</p>
       <p>{ date }</p>
-    </a>
+    </ListItem>
   ));
 
   return (
