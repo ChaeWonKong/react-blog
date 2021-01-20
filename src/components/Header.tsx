@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -9,6 +10,10 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   padding: 12px 24px;
+
+  & > a {
+    text-decoration: none;
+  }
 `;
 
 const Title = styled.h1`
@@ -20,7 +25,7 @@ const Title = styled.h1`
 
 const Header = () => (
   <Wrapper>
-    <Title onClick={() => location.href = '/'}>TIN WOODMAN</Title>
+    <Link to='/'><Title>TIN WOODMAN</Title></Link>
   </Wrapper>
 );
 

@@ -1,14 +1,15 @@
 import React from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
-import reset from 'styled-reset';
 import Header from './Header';
 import Helment from 'react-helmet';
+import reset from 'styled-reset';
 
 interface LayoutProps {
   children: React.ReactNode;
 }
 
 const GlobalStyle = createGlobalStyle`
+  ${reset};
   * {
     box-sizing: border-box;
     -ms-overflow-style: none;  /* IE and Edge */
@@ -16,6 +17,7 @@ const GlobalStyle = createGlobalStyle`
   }
   body {
     font-family: 'PT Sans', 'Noto Sans KR', sans-serif;
+    line-height: 1.8;
   }
   *:focus {
     outline: none;
@@ -32,6 +34,29 @@ const GlobalStyle = createGlobalStyle`
       color: #ababab;
     }
   };
+  h1 {
+    font-size: 24px;
+    line-height: 2;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-size: 22px;
+    line-height: 2;
+    margin-top: 20px;
+    font-weight: bold;
+  }
+
+  h3 {
+    font-size: 18px;
+    line-height:2;
+    margin-top: 16px;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: lighter;
+  }
 `;
 
 const Wrapper = styled.div`
