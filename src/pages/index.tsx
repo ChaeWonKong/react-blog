@@ -4,13 +4,34 @@ import Layout from '../components/Layouts';
 import { graphql } from 'gatsby';
 
 const Wrapper = styled.div`
-
+  
 `;
 
 const ListItem = styled.a`
+  display: flex;
   font-size: 18px;
   margin: 24px 0;
-`
+  justify-content: space-between;
+  text-decoration: none;
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+}
+`;
+
+const Title = styled.h1`
+  font-size: 20px;
+  font-weight: normal;
+  text-decoration: underline;
+`;
+
+const Date = styled.h3`
+  font-size: 16px;
+  color: #ababab;
+  font-weight: normal;
+  text-decoration: none;
+`;
 
 const IndexPage = ({ data }: any) => {
   const posts = data.allMarkdownRemark.edges
@@ -18,8 +39,8 @@ const IndexPage = ({ data }: any) => {
 
   const renderPosts = () =>posts.map(({ title, date, slug }) => (
     <ListItem href={ slug } key={ slug }>
-      <p>{ title }</p>
-      <p>{ date }</p>
+      <Title>{ title }</Title>
+      <Date>{ date }</Date>
     </ListItem>
   ));
 
